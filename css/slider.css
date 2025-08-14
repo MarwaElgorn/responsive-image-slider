@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.image-caption {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  width: 80%;
+  right: 10%;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .image-caption {
+    width:80%;
+    height: 100px;
+    right: 10%;
+    bottom: 0;
+  }
+}
+
+#lightBoxContainer {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+}
+#lightBoxItem {
+  height: 600px;
+  width: 50%;
+  background-image: url(../images/3.jpg);
+  background-size: cover;
+
+  height: 80vh;
+  width: 60%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+.item img {
+  height: 600px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .item img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  #lightBoxItem {
+    width: 90%;
+    height: 60vh;
+  }
+}
+
+#lightBoxItem i {
+  font-size: 20px;
+  cursor: pointer;
+  margin: 16px;
+  color: white;
+}
+
+#close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
